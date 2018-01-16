@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.litte.wms.fragment.ScanFragment">
+
+    <LinearLayout
+        android:id="@+id/linearLayout_scanner_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="3dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="编号"
+            android:gravity="center"
+            android:textSize="18sp" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="条码"
+            android:gravity="center"
+            android:textSize="18sp" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="次数"
+            android:gravity="center"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listView_scanner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linearLayout_scanner_title"
+        android:divider="#0a0f0b"
+        android:dividerHeight="1dp"
+        android:choiceMode="multipleChoice"
+        android:layout_above="@+id/linearLayout_scanner_bottom" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout_scanner_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+        <CheckBox
+            android:id="@+id/checkbox_scanner_per"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To scan per 100 ms" />
+        <Button
+            android:id="@+id/button_scanner_start"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="开始扫描"
+            android:layout_marginBottom="3dp"
+            android:layout_marginRight="3dp"/>
+    </LinearLayout>
+
+</RelativeLayout>

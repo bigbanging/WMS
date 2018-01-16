@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.litte.wms.fragment.CheckFragment">
+
+    <Button
+        android:id="@+id/button_check_read"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="开始读卡"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="3dp"/>
+    <LinearLayout
+        android:id="@+id/linearLayout_check"
+        android:layout_below="@+id/button_check_read"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <ListView
+            android:id="@+id/listView_check_left"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:divider="#0a0f0b"
+            android:dividerHeight="1dp"/>
+        <LinearLayout
+            android:id="@+id/linearLayout_check_right"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/linearLayout_check_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="序号"
+                    android:gravity="center"
+                    android:textSize="18sp" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:gravity="center"
+                    android:text="EPC"
+                    android:textSize="18sp" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="次数"
+                    android:textSize="18sp" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text=""
+                    android:textSize="18sp" />
+            </LinearLayout>
+            <ListView
+                android:id="@+id/listView_uhf"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/linearLayout_check_title"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:divider="#0a0f0b"
+                android:dividerHeight="1dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

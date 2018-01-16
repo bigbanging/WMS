@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.litte.wms.fragment.IOFragment">
+
+    <Button
+        android:id="@+id/button_io_read"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="开始读卡"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"/>
+    <RadioGroup
+        android:id="@+id/radioGroup_io"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_toRightOf="@+id/button_io_read"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp">
+        <RadioButton
+            android:id="@+id/radioButton_io_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="入库"/>
+        <RadioButton
+            android:id="@+id/radioButton_io_output"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="出库"/>
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_io_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/button_io_read"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="编号"
+            android:gravity="center"
+            android:textSize="18sp" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="条码"
+            android:gravity="center"
+            android:textSize="18sp" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="次数"
+            android:gravity="center"
+            android:textSize="18sp" />
+    </LinearLayout>
+    <ListView
+        android:id="@+id/listView_io"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#0a0f0b"
+        android:dividerHeight="1dp"
+        android:layout_below="@+id/linearLayout_io_title"/>
+
+</RelativeLayout>
